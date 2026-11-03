@@ -5,42 +5,17 @@
   "license": "MIT",
   "author": "Eights",
   "homepage": "https://github.com/eightstudioshel/eights-developer-toolkit#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/eightstudioshel/eights-developer-toolkit.git"
-  },
-  "bugs": {
-    "url": "https://github.com/eightstudioshel/eights-developer-toolkit/issues"
-  },
+  "repository": {"type": "git", "url": "https://github.com/eightstudioshel/eights-developer-toolkit.git"},
+  "bugs": {"url": "https://github.com/eightstudioshel/eights-developer-toolkit/issues"},
   "keywords": ["react", "typescript", "components", "hooks", "utilities", "eights"],
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
+  "exports": {".": {"types": "./dist/index.d.ts", "import": "./dist/index.js", "require": "./dist/index.cjs"}},
   "files": ["dist", "README.md", "LICENSE"],
   "sideEffects": false,
-  "scripts": {
-    "build": "tsup",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint src --max-warnings=0",
-    "prepublishOnly": "npm run typecheck && npm run build"
-  },
-  "peerDependencies": {
-    "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
-  },
-  "devDependencies": {
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "eslint": "^9.0.0",
-    "typescript": "^5.4.0",
-    "tsup": "^8.0.0"
-  }
+  "scripts": {"build": "tsup", "typecheck": "tsc --noEmit", "prepublishOnly": "npm run typecheck && npm run build"},
+  "peerDependencies": {"react": ">=18.0.0", "react-dom": ">=18.0.0"},
+  "devDependencies": {"@types/react": "^19.0.0", "@types/react-dom": "^19.0.0", "typescript": "^5.4.0", "tsup": "^8.0.0"}
 }
