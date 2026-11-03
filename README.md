@@ -1,15 +1,15 @@
 # Eights Developer Toolkit
 
-A practical, open-source collection of reusable React + TypeScript components, hooks, and utilities by **Eights**.
+A practical, open-source collection of reusable React + TypeScript components, hooks, and frontend utilities by **Eights**.
 
-The project is designed to give product teams a small, accessible foundation for common interface patterns and everyday frontend tasks.
+The toolkit provides a small, accessible starting point for common interface patterns and everyday frontend tasks.
 
 ## What's included
 
-- **UI components** — typed Button, Card, and Input components with accessible defaults.
-- **React hooks** — debounced values and persistent state.
+- **UI components** — typed Button, Card, and Input primitives.
+- **React hooks** — debounced values and state synchronized with localStorage.
 - **Utilities** — class-name composition, clamping, currency formatting, and debouncing.
-- **Developer experience** — TypeScript declarations, build scripts, linting, and CI.
+- **Developer experience** — TypeScript declarations, build scripts, and GitHub Actions CI.
 
 ## Requirements
 
@@ -19,21 +19,22 @@ The project is designed to give product teams a small, accessible foundation for
 
 ## Install
 
-This repository is under active development. Until the first npm release, install from GitHub:
+The project is in early development. Install directly from GitHub:
 
 ```bash
 npm install github:eightstudioshel/eights-developer-toolkit
 ```
 
-Peer dependencies: `react` and `react-dom`.
+React and React DOM are peer dependencies and should be installed in your application.
 
 ## Quick start
 
 ```tsx
-import { Button, Card, Input, cn, useDebounce } from "eights-developer-toolkit";
+import { useState } from "react";
+import { Button, Card, Input, useDebounce } from "eights-developer-toolkit";
 
-export function Example() {
-  const [query, setQuery] = React.useState("");
+export function SearchPanel() {
+  const [query, setQuery] = useState("");
   const debouncedQuery = useDebounce(query, 300);
 
   return (
@@ -53,7 +54,7 @@ export function Example() {
 }
 ```
 
-> The example uses React state, so import React (or the relevant hooks) in your application.
+Components use Tailwind CSS utility classes. Make sure your Tailwind setup scans the package's distributed files, or adapt the component styles to your design system.
 
 ## Development
 
@@ -79,7 +80,7 @@ src/
 2. Small APIs with useful TypeScript types.
 3. No hidden network calls or telemetry.
 4. Keep dependencies lean.
-5. Document behavior and test important edge cases.
+5. Document behavior and important edge cases.
 
 ## Contributing
 
